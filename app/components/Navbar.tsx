@@ -18,7 +18,7 @@ const Navbar = async () => {
         </Link>
 
         {/* Navigation Section */}
-        <div className="flex items-center gap-6 text-gray-700 font-medium">
+        <div className="flex items-center gap-6 text-black font-medium">
           {session?.user ? (
             <>
               <Link
