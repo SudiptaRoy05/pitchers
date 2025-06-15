@@ -1,9 +1,9 @@
 import { Search } from "lucide-react";
 import Form from "next/form";
 import SearchFormReset from "./SearchFormReset";
+import { Button } from "./ui/button";
 
-const SearchForm = () => {
-    const query = "test"
+const SearchForm = ({ query }: { query?: string }) => {
     return (
         <Form
             action="/"
@@ -24,13 +24,13 @@ const SearchForm = () => {
                 )}
 
                 {/* Search (Q) Button */}
-                <button
+                <Button
                     type="submit"
-                    className="p-2 bg-blue-600 text-white hover:bg-blue-700 rounded-full transition"
+                    className="p-2 bg-blue-600 text-white hover:bg-blue-700 rounded-full transition search-btn"
                     title="Search"
                 >
                     <Search size={18} />
-                </button>
+                </Button>
             </div>
 
         </Form>

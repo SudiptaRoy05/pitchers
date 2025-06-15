@@ -1,29 +1,28 @@
+'use client';
 import { X } from "lucide-react";
+import { Button } from "./ui/button";
 
 const SearchFormReset = () => {
 
-    const reset = () => {
+     const reset = () => {
         const form = document.querySelector('.search-form') as HTMLFormElement;
-        if (form) {
 
-            form.reset();
-
-        }
+        if(form) form.reset();
     }
     return (
         <div>
-            <button
+            <Button
                 onClick={reset}
                 type="reset"
                 className="p-2 text-gray-500 hover:text-red-500 hover:bg-gray-100 rounded-full transition"
                 title="Clear"
             >
                 <X size={18} />
-            </button>
+            </Button>
         </div>
     )
 
 }
 
-export default SearchFormReset
+export default SearchFormReset;
 
